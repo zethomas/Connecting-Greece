@@ -1,0 +1,72 @@
+install.packages("maptools")
+library(sp)
+library(maptools)
+
+read_csv("data/inscription_database_Rcompat.csv")
+orig_df <- read.csv("data/inscription_database_Rcompat.csv")
+read_csv("data/latlongcoords.csv") 
+line_df <- read_csv("data/latlongcoords.csv")
+
+orig_df
+
+
+library(tidyverse)
+library(leaflet)
+library(tidyr)
+library(dplyr)
+
+##lines 20-34 allow for the drawing of separate lines rather than one continuous one between all points
+df
+
+df$orgin_df <- seq(from = 1, to = ((nrow(df) * 2) - 1), by = 2)
+
+df1 <- setNames(orig_df[c("id","lat1","long1")],
+                c("id", "lat","lon"))
+df2 <- setNames(orig_df[c("id","lat2","long2")],
+                c("id", "lat","lon"))
+
+df2$orig_df <- (df2$orig_df + 1)
+
+df <- rbind(df1, df2)
+df <- df[with(df, order(orig_df)), ]
+
+df <- unique(df[c("id", "lat","lon")])
+
+##lines 37-73 run the map program
+map <- leaflet(data = orig_df) %>%
+  addTiles() %>%
+  addMarkers (~long1, ~lat1, popup= paste0("<a href=\"", ##this first addMarkers adds polity1 markers
+                                           orig_df$pleiades1,
+                                           "\">",
+                                           orig_df$polity1,
+                                           "</a><br>", # <br> for line 
+                                           # break in html
+                                           "Type: ", orig_df$type,
+                                           "<br>",
+                                           "Date: ", orig_df$dating,
+                                           "<br>",
+                                           "Findspot: ", orig_df$findspot,
+                                           "<br>",
+                                           "Inscription Reference Number(s): ", orig_df$inscription_num
+                                           
+  )) %>% 
+  addMarkers (~long2, ~lat2, popup= paste0("<a href=\"", ##this addMarkers adds polity2 markers
+                                           orig_df$pleiades2,
+                                           "\">",
+                                           orig_df$polity2,
+                                           "</a><br>", # <br> for line 
+                                           # break in html
+                                           "Type: ", orig_df$type,
+                                           "<br>",
+                                           "Date: ", orig_df$dating,
+                                           "<br>",
+                                           "Findspot: ", orig_df$findspot,
+                                           "<br>",
+                                           "Inscription Reference Number(s): ", orig_df$inscription_num
+  ))
+
+for(i in unique(df$id)){ ##this for loop creates the connecting lines
+  map <- addPolylines(map, data = df[df$id == i,], 
+                      lat = ~lat, lng = ~lon, group = ~id)
+}
+map
