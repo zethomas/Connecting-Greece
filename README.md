@@ -12,4 +12,6 @@ This is a sampler of our collected data for the proof of concept.
 
 # latlongcoords.csv
 This is a secondary data set based on inscription_database_Rcompat.csv which allows for the drawing of 
-segmented lines within RStudio Cloud using leaflet, instead of leaflet's default continuous line.
+segmented lines within RStudio Cloud using leaflet, instead of leaflet's default continuous line. It uses the same
+IDs assigned to the inscription_database_Rcompat.csv file (one ID per inscription) to keep the two files linked
+together.
