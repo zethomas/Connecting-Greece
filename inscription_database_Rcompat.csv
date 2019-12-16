@@ -1,0 +1,17 @@
+id,inscription_num,polity1,pleiades1,lat1,long1,polity2,pleiades2,lat2,long2,polity3,polity4,findspot,dating,internal_yn,external_yn,type
+1001,Syll.III 535; IG II^2 .844.1,Athens,https://pleiades.stoa.org/places/579885,37.97281915,23.72374385,Cydonia,https://pleiades.stoa.org/places/589886,35.515775,24.01869,Cnossus,Polyrrhenia,Athens,228/7 BCE,n,y,honorary decree
+1002,"Staatsv. III.482; ICret. I, pp. 60f. no6",Cnossus,https://pleiades.stoa.org/places/589872,35.2977445,25.163289,Miletus,https://pleiades.stoa.org/places/599799,37.52290473,27.27831683,,,Cnossus,post 260 BCE,n,y,protection agreement
+1003,Syll.III 527; IC 1.9.1,"Dreros
+",https://pleiades.stoa.org/places/589767,35.256232,25.629044,Cnossus,https://pleiades.stoa.org/places/589872,35.2977445,25.163289,Lyttus,,,c. 220? BCE,y,n,"polity oath
+"
+1004,Syll.III 581; IC 3.3.3; Staatsv. III.551,Rhodes,https://pleiades.stoa.org/places/590031,36.195597,27.964125,Hierapytna,https://pleiades.stoa.org/places/589807,35.0095285,25.7387505,"Cnossus
+",,Rhodes,c. 200? BCE,n,y,military agreement
+1005,"Syll.III 528; ICret. I, p. 62 no.7",Cnossus,https://pleiades.stoa.org/places/589872,35.2977445,25.163289,Cos,https://pleiades.stoa.org/places/599581,36.844,27.17,"Gortyn
+",,Cnossus,221-219 BCE,n,y,honorary decree
+1006,"Syll.III 463; ICret. III, pp. 83-5, no. 4",Itanos,https://pleiades.stoa.org/places/589824,35.2655385,26.263941,"Alexandria
+",https://pleiades.stoa.org/places/727070,31.201435,29.909773,,,,c. 246 BCE,n,y,honorary decree
+1007,IC 1.16.1,Gortyn,https://pleiades.stoa.org/places/589796,35.06272017,24.94694372,Lato,https://pleiades.stoa.org/places/589899,35.1785382,25.65567205,,,Lato,219-216 BCE,y,n,property agreement
+1008,IC 1.24.1,Priansos,https://pleiades.stoa.org/places/590013,35.045887,25.258393,Teos,https://pleiades.stoa.org/places/550913,38.185491,26.785397,,,Teos,post ca. 170 BCE,n,y,honorary decree
+1009,IC 1.8.11,"Cnossus
+",https://pleiades.stoa.org/places/589872,35.2977445,25.163289,Teos,https://pleiades.stoa.org/places/550913,38.185491,26.785397,,,Teos,ca. 170 BCE,n,y,honorary decree
+1010,IC 2.3.2,Aptera,https://pleiades.stoa.org/places/589704,35.46477025,24.1449764,Teos,https://pleiades.stoa.org/places/550913,38.185491,26.785397,,,Teos,post ca. 170 BCE,n,y,decree of inviolobility
